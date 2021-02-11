@@ -39,10 +39,8 @@ export function DashboardProvider( {children} ) {
     }
     const callMeeting = async (token, reservationCode, name) => {
         const userId = auth.currentUser.uid;
-        const displayRef =  await database.ref('display/'+userId);
         const specialistRef =  await database.ref('specialists/'+userId);
         const reservationRef = await database.ref('reservations/'+reservationCode)
-        await displayRef.update({ token });
         await reservationRef.update({status:'called'});
         await specialistRef.update({currentPatient:{name:name, token:token, status:'called'}})
     }
