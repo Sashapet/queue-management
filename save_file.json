@@ -1,0 +1,12 @@
+{"users": [
+{
+  "localId": "I9lOZt340jcOt0TPotBkmLkEXKI3",
+  "email": "root@root.com",
+  "emailVerified": false,
+  "passwordHash": "mLmj5PAEbCAck/l8G6zhWBEOOen6B/dNuUXnzqdvucVfvIMdDOgP/3wh0YZmoxbSb86GvP9493td/Qe27EdNRg==",
+  "salt": "08lqBzkt5512uQ==",
+  "lastSignedInAt": "1612284038292",
+  "createdAt": "1612283400603",
+  "disabled": false,
+  "providerUserInfo": []
+}]}

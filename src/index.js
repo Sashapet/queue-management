@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router} from "react-router-dom";
+import { AuthProvider } from './context/AuthContext';
+import { DashboardProvider } from './context/DashboardContext'
+import {CustomerProvider} from './context/CustomerContext'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <AuthProvider>
+      <DashboardProvider>
+        <CustomerProvider>
+          <App />
+        </CustomerProvider>
+      </DashboardProvider>
+    </AuthProvider>
+  </Router>,
   document.getElementById('root')
 );
 
