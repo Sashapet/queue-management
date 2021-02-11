@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/queue-management/static/css/main.b9a35326.chunk.css",
-    "main.js": "/queue-management/static/js/main.f7683643.chunk.js",
-    "main.js.map": "/queue-management/static/js/main.f7683643.chunk.js.map",
+    "main.js": "/queue-management/static/js/main.0db17630.chunk.js",
+    "main.js.map": "/queue-management/static/js/main.0db17630.chunk.js.map",
     "runtime-main.js": "/queue-management/static/js/runtime-main.c79352d4.js",
     "runtime-main.js.map": "/queue-management/static/js/runtime-main.c79352d4.js.map",
     "static/js/2.8762da19.chunk.js": "/queue-management/static/js/2.8762da19.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.c79352d4.js",
     "static/js/2.8762da19.chunk.js",
     "static/css/main.b9a35326.chunk.css",
-    "static/js/main.f7683643.chunk.js"
+    "static/js/main.0db17630.chunk.js"
   ]
 }
