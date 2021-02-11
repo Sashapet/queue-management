@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+LINK
+----------------------
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SPECIALISTS LOGIN INFO
+----------------------
+ORTHODONTIST
+mail : orthodontist@root.com
+password : rootroot
 
-## Available Scripts
+ALLERGIST
+mail : allergist@root.com
+password : rootroot
 
-In the project directory, you can run:
+CARDIOLOGIST
+mail : cardiologist@root.com
+password : rootroot
 
-### `npm start`
+PSYCHIATRIST
+mail : psychiatrist@root.com
+password : rootroot
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+HOW TO USE (CUSTOMER)
+-------------------
+Customers can register to their desired specialist.
+After a successful reservation customers are provided with reservation that can be used to access the dashboard.
+Proceeded to dashboard, customers have an ability to see public display that shows specialists 'desk' with current visits and 5 incoming customers (tokens)
+Also customers can see their place in queue and approximate time till visit start.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+HOW TO USE (SPECIALIST)
+--------------------
+Specialists have a login account through which they can access a specialist dashboard.
+Specialists see only those customers that have had registered to them.
+Specialist pushes call button, ant waits for customer. After customer proceeded to desk, specialist pushes seconds button : start meeting. When meeting ends, third button : end meeting.
+Specialists can also cancel meeting if they want to.
+Every meeting should be no more than 10 minutes, otherwise customers will be waiting longer than their calculated approximate time.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+CALCULATED APPROXIMATE TIME
+------------------------------
+When specialist starts meeting for the first customer, system calculates difference between starting time + 10 minutes(one meeting) and current time;
+If meeting is longer than 10 minutes, timer stops and system listens for the next meeting to start.
