@@ -15,19 +15,19 @@ function App() {
   if(currentUser){
     routes = (
       <Switch>
-        <Route exact path='queue-management/' component={Dashboard} />
-        <Route path='queue-management/display/:id' component={CustomerDashboard} />
-        <Route path='queue-management/reservation' component={Reservation} />
+        <Route exact path='/queue-management' component={Dashboard} />
+        <Route path='/queue-management/display/:id' component={CustomerDashboard} />
+        <Route path='/queue-management/reservation' component={Reservation} />
         <Route component={PageNotFound} />
       </Switch>
     )
   }else if(currentUser === null){
     routes = (
       <Switch>
-        <Route exact path='queue-management/' component={Main} />
-        <Route path='queue-management/signin' component={SignIn} />
-        <Route path='queue-management/display/:id' component={CustomerDashboard} />
-        <Route path='queue-management/reservation' component={Reservation} />
+        <Route exact path='/queue-management' component={Main} />
+        <Route path='/queue-management/signin' component={SignIn} />
+        <Route path='/queue-management/display/:id' component={CustomerDashboard} />
+        <Route path='/queue-management/reservation' component={Reservation} />
         <Route component={PageNotFound} />
       </Switch>
     )

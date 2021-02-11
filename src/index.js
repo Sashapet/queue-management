@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router} from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { AuthProvider } from './context/AuthContext';
 import { DashboardProvider } from './context/DashboardContext'
 import {CustomerProvider} from './context/CustomerContext'
 
 ReactDOM.render(
-  <Router>
+  <HashRouter>
     <AuthProvider>
       <DashboardProvider>
         <CustomerProvider>
@@ -17,7 +17,7 @@ ReactDOM.render(
         </CustomerProvider>
       </DashboardProvider>
     </AuthProvider>
-  </Router>,
+  </HashRouter>,
   document.getElementById('root')
 );
 

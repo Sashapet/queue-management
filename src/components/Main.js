@@ -4,8 +4,8 @@ import firebase from 'firebase'
 export default function Main() {
     return (
         <div className='operation-buttons'>
-            <Link to='/reservation'>CUSTOMER</Link>
-            <Link to='/signin'>SPECIALIST</Link>
+            <Link to='/queue-management/reservation'>CUSTOMER</Link>
+            <Link to='/queue-management/signin'>SPECIALIST</Link>
         </div>
     )
 }

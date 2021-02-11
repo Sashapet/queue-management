@@ -16,7 +16,7 @@ export default function SignIn() {
         let password = passRef.current.value;
         try {
             await signIn(email, password);
-            history.push('/');
+            history.push('/queue-management/');
         }catch(e){
             console.log(e.message);
         }
@@ -30,7 +30,7 @@ export default function SignIn() {
                 <input ref={passRef} type="text" /><br /><br />
                 <input type="submit" onClick={handleSubmit} value="Login" />
             </form>
-            <Link to='/'>Back</Link>
+            <Link to='/queue-management/'>Back</Link>
         </div>
         )
 }

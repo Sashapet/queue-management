@@ -42,7 +42,7 @@ export function CustomerProvider( {children} ) {
                 timestamp:date.getTime(),
             }
             reservationsRef.child(key).set(customer).then(() => {
-                history.push(`/display/${key}`);
+                history.push(`/queue-management/display/${key}`);
             })
         })
     }

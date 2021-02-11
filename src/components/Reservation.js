@@ -26,7 +26,7 @@ export default function Reservation() {
                 </select><br />
                 <label>Your Name</label><br/>
                 <input ref={nameRef} type="text" /><br /><br />
-                <Link to='/'>Back</Link>
+                <Link to='/queue-management/'>Back</Link>
                 <input type="submit" onClick={handleSubmit} value="Reserve" />
             </form>
         </div>

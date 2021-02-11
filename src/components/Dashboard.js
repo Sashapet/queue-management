@@ -15,7 +15,7 @@ export default function Dashboard() {
     const handleLogOut = async () => {
        try {
            await logOut()
-            history.push('/');
+            history.push('/queue-management/');
         }catch(e){
             console.log(e.message);
         }

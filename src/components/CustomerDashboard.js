@@ -37,7 +37,7 @@ export default function CustomerDashboard(props) {
                 <p>Hello {userData.name}, Your token : {userData.token}</p>
                 {userData.status === 'called' && <p>Your turn is up, please proceede to the counter</p>}
                 {userData.status === 'started' && <p>A meeting have been started</p>}
-                <button onClick={()=>cancelMeeting(userData.reservationCode, userData, userData.token)}>Cancel visit</button>
+                <button onClick={()=>cancelMeeting(userData.reservationCode, queueData, userData.token)}>Cancel visit</button>
                 <div className='display'>
                     <div className='current-visits'>
                         <CurrentVisits queueData={queueData} />
