@@ -4,7 +4,7 @@ import SignIn from './components/SignIn'
 import Reservation from './components/Reservation'
 import Dashboard from './components/Dashboard'
 import CustomerDashboard from './components/CustomerDashboard'
-import Queue from './components/Queue'
+import CurrentCustomer from './components/CurrentCustomer'
 import PageNotFound from './components/PageNotFound/PageNotFound'
 import '../src/css/style.css'
 import {Route, Switch} from "react-router-dom";
@@ -28,6 +28,7 @@ function App() {
         <Route path='/queue-management/signin' component={SignIn} />
         <Route path='/queue-management/display/:id' component={CustomerDashboard} />
         <Route path='/queue-management/reservation' component={Reservation} />
+        <Route path='/queue-management/current-customer' component={CurrentCustomer} />
         <Route component={PageNotFound} />
       </Switch>
     )

@@ -1,9 +1,12 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState} from 'react'
 import {Link} from 'react-router-dom'
 import {useCustomer} from '../context/CustomerContext'
+import {useHistory} from 'react-router-dom'
 
 export default function Reservation() {
-    const {reservation} = useCustomer();
+    const [reservationDone, setReservationDone] = useState(false)
+    const {reservation, reservationCode} = useCustomer();
+    const history = useHistory();
     const specialistRef = useRef();
     const nameRef = useRef();
     
@@ -12,7 +15,32 @@ export default function Reservation() {
         e.preventDefault();
         let specialist = specialistRef.current.value;
         let name = nameRef.current.value;
-        await reservation(specialist, name);
+        try{
+            await reservation(specialist, name);
+            setReservationDone(true);
+        }
+        catch(e){
+            console.log(e.message);
+        }
+    }
+    const handleProceed = (e) => {
+        e.preventDefault();
+        history.push(`/queue-management/display/${reservationCode}`);
+    }
+    if (reservationDone) {
+        if (reservationCode) {
+            return (
+                <div className='reservation-container'>
+                    <h1>PLEASE SAVE YOUR RESERVATION CODE : {reservationCode}</h1>
+                    <button onClick={handleProceed}>Proceed</button>
+                </div>
+            )
+        }else{
+        <div className='reservation-container'>
+            <h1>LOADING...</h1>
+        </div>
+        }
+
     }
     return (
         <div className='reservation-container'>

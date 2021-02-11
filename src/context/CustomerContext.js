@@ -13,6 +13,7 @@ export function CustomerProvider( {children} ) {
     const [loading, setLoading] = useState(true);
     const [incomingVisits, setIncomingVistis] = useState();
     const [queueData, setQueueData] = useState();
+    const [reservationCode, setReservationCode] = useState();
     const history = useHistory();
 
     const reservation = (specialist, name) => {
@@ -42,7 +43,8 @@ export function CustomerProvider( {children} ) {
                 timestamp:date.getTime(),
             }
             reservationsRef.child(key).set(customer).then(() => {
-                history.push(`/queue-management/display/${key}`);
+                setReservationCode(key);
+                // history.push(`/queue-management/display/${key}`);
             })
         })
     }
@@ -105,6 +107,7 @@ export function CustomerProvider( {children} ) {
         fetchDisplay,
         fetchIncomingVisits,
         cancelMeeting,
+        reservationCode,
         userData,
         incomingVisits,
         queueData,

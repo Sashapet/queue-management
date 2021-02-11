@@ -30,6 +30,7 @@
 }
 
 .main-container .operation-buttons a {
+  width: 300px;
   font-size: 30px;
   margin: 7px;
   text-decoration: none;
